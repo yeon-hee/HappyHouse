@@ -25,6 +25,7 @@ import com.ssafy.happyhouse.service.QnAService;
 import io.swagger.annotations.ApiOperation;
 
 //http://localhost:9999/happyhouse/swagger-ui.html
+
 @CrossOrigin(origins = { "*" }, maxAge = 6000)
 @RestController
 @RequestMapping("/api/qna")
@@ -46,11 +47,9 @@ public class QnAController {
     
     @ApiOperation(value = "새로운 질문게시판 정보를 입력한다. 그리고 DB입력 성공여부에 따라 'success' 또는 'fail' 문자열을 반환한다.", response = String.class)
   	@PostMapping
-  	public ResponseEntity<String> writeQnA(@RequestBody QnA qna, HttpSession session) {
+  	public ResponseEntity<String> writeQnA(@RequestBody QnA qna) {
   		logger.debug("writeQnA - 호출");
-  		String userid = (String) session.getAttribute("userId");
-  		System.out.println(userid+" 안녕 ");
-  		qna.setQna_userid(userid);
+  		System.out.println(qna);
   		if (qnaService.writeQnA(qna)) {
   			return new ResponseEntity<String>(SUCCESS, HttpStatus.OK);
   		}

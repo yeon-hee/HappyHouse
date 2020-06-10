@@ -14,10 +14,15 @@
 
   <!-- Custom styles for this template -->
   <link href="resources/css/full-width-pics.css" rel="stylesheet">
+  <link href=/css/app.f9718f7a.css rel=preload as=style>
+<link href=./js/app.dd2375cc.js rel=preload as=script>
+<link href=./js/chunk-vendors.a4d5df49.js rel=preload as=script>
+<link href=/css/app.f9718f7a.css rel=stylesheet>
 </head>
+
 <body>
   <%@ include file="/WEB-INF/header.jsp" %>
-
+	
   <!-- Content section -->
   <section class="py-5">
     <div class="container">

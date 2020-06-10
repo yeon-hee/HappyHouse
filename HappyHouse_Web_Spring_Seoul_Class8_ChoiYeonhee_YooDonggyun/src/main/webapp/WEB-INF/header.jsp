@@ -26,6 +26,12 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
+          
+          	<a class="nav-link" href="http://127.0.0.1:9001/index.html">QnA게시판
+              <span class="sr-only">(current)</span>
+           </a>
+            </li>
+            <li class="nav-item active">
             <a class="nav-link" href="${pageContext.request.contextPath}/user/logout.do">로그아웃
               <span class="sr-only">(current)</span>
             </a>
