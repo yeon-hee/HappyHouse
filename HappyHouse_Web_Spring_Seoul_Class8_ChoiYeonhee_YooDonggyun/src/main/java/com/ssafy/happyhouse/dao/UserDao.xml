@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="com.ssafy.happyhouse.dao.UserDao">
+
+   <select id="login" resultType="string" parameterType="PeopleInfo">
+      select id
+      from   peopleinfo
+      where  id = #{id}
+      and      password = #{password}
+   </select>
+   
+   <select id="getInfo" resultType="PeopleInfo" >
+      select    id,
+             password,
+             name,
+             address,
+             phone_number as phoneNumber
+             
+      from      peopleinfo
+      where     id = #{id}
+   </select>
+   
+   <insert id="insert">
+      insert into peopleinfo (id, password, name, address, phone_number) 
+                  VALUES (#{id},
+                        #{password},
+                        #{name},
+                        #{address},
+                        #{phoneNumber}   )
+   </insert>
+   
+   <update id="update"         >
+      update peopleinfo set
+            id = #{id}
+            , password = #{password}
+           , name = #{name}
+           , address = #{address}
+           , phone_number = #{phoneNumber}
+      where    id= #{id}
+   </update>
+   
+   <delete id="delete">
+      delete from peopleinfo where id = #{id}
+   </delete>
+</mapper>
+
+
+
+
+
+
