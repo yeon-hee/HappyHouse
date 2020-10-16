@@ -49,8 +49,6 @@
 - 부동산 관련 오늘의핫이슈, 투자정보 조회
 - 서울 날씨 정보 크롤링
 <br>
-<br>
-
 
 #### Back-End 부분을 Spring Framework와 myBatis Framework로 변경하여 웹 서버 구축
 
